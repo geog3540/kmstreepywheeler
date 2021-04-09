@@ -1,0 +1,12 @@
+p {
+  background-color: #dddddd
+}
+
+h1 {
+  font-family: Verdana, Geneva, sans-serif;
+  color: green;
+}
+
+a:hover{
+  color: green
+}
