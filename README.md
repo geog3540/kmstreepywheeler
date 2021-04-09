@@ -1,2 +1,1 @@
-# kmstreepywheeler
-geog3540/kmstreepywheeler - Streepy-Wheeler Kaleb
+# This is a repository for my Geovisualization Portfolio.
