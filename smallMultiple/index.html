@@ -118,13 +118,13 @@
 	// TODO: Change the variables below to customize the small multiples interface for your data
 	var polygonJSONFile = 'data/TurkeyProvincesSimplifiedArcPro.geojson'
 	// change the projection if needed *d3.geoAlbers()*
-	var projection = d3.geoTransverseMercator().rotate([-33,0,0]);
+	var projection = d3.geoTransverseMercator().rotate([-35,0,0]);
 	var widthheightRatio = 0.33;
 	// Relative placement of legend that ranges between 0 and 1.
 	// 0 is the start, whereas 1 i the end of each panel.
 	// If you want to put the legend on the left, then use 0.
 	// legendY = 0.5 puts the legend in the middle of the Y Axis.
-	var legendX = 0.84, legendY = 0.8
+	var legendX = 0, legendY = 0.2
 
 	// id attribute and the name attribute to be used in the tooltip
 	var idAttribute = 'ProvNameTR', nameAttribute = 'ProvNameTR';
@@ -172,7 +172,7 @@
 	var chartWidth = d3.select('#divMap1')
 	.node().getBoundingClientRect().width,
 	chartHeight = chartWidth * widthheightRatio;
-	var margin = {top: 10, right: 20, bottom: 10, left:20},
+	var margin = {top: 10, right: 0, bottom: 10, left:0},
 	width = chartWidth - margin.right - margin.left,
 	height = chartHeight - margin.top - margin.bottom,
 	histHeight = (chartHeight * .25);
@@ -363,12 +363,12 @@
 						panel.select('.legendQuant').call(holdLegend.scale(current_scale));
 
 						// add north arrow
-						panel
-						.append('path')
-						.attr('id', 'arrow')
-						.attr("d", "M 6 0 12 12 6 9 0 12")
-						.attr('fill', "black")
-						.attr("transform", "translate(" + margin.left + "," + margin.top + ") rotate("+ 0 +")");
+						// panel
+						// .append('path')
+						// .attr('id', 'arrow')
+						// .attr("d", "M 6 0 12 12 6 9 0 12")
+						// .attr('fill', "black")
+						// .attr("transform", "translate(" + margin.left + "," + margin.top + ") rotate("+ 0 +")");
 
 					}); // end for each
 				});
